@@ -12,11 +12,10 @@ class MSTTableViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Uncomment the following line to preserve selection between presentations
-        // self.clearsSelectionOnViewWillAppear = false
-
-        // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-        // self.navigationItem.rightBarButtonItem = self.editButtonItem
+        // the auto height for cell and labels
+        tableView.rowHeight = UITableView.automaticDimension
+        tableView.estimatedRowHeight = 80
+        
     }
 
     // MARK: - Table view data source
@@ -39,8 +38,6 @@ class MSTTableViewController: UITableViewController {
             cell.emailLabel.text = "thisismyemail@gmail.com"
             cell.phoneLabel.text = "(123) 124-0987 ext 5512567"
         }
-        // Configure the cell...
-        
 
         return cell
     }
