@@ -9,6 +9,7 @@ import XCTest
 
 final class UserCodableTests: XCTestCase {
 
+    // MARK: Testing functions
     
     /// Test the decoding of the array of `User` objects
     func testUserDecode() throws {
@@ -56,7 +57,7 @@ final class UserCodableTests: XCTestCase {
         // If in the future actual nil values need to be tested, some adjustment will need to be done here (for example, have a nil check array and check accorgin to the position)
         // in addition, if we are dealing with large data sets, we could do simple array lookups to determine if the calue exists in the array rather than checking the actual
         // array position.
-        XCTAssertEqual(testUser.id, userIdExpected[position], "Expecting `id` userIdExpected[position] of , actual \(testUser.id)")
+        XCTAssertEqual(testUser.id, userIdExpected[position], "Expecting `id` of \(userIdExpected[position]), actual \(testUser.id)")
         XCTAssertEqual(testUser.name ?? "", namesExpected[position], "Expecting `name` of \(namesExpected[position]), actual '\(testUser.name ?? "")'")
         XCTAssertEqual(testUser.email ?? "", emailExpected[position], "Expecting `email` of '\(emailExpected[position])', actual '\(testUser.email ?? "")'")
         XCTAssertEqual(testUser.phone ?? "", phoneExpected[position], "Expecting `phone` of '\(phoneExpected[position])', actual '\(testUser.phone ?? "")'")
