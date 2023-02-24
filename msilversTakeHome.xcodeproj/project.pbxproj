@@ -146,8 +146,8 @@
 				1234FA3129A909FA00EFECF2 /* Models */,
 				1234FA3029A909E000EFECF2 /* MainView */,
 				127A57EC29A8E4D90087BE2A /* Main.storyboard */,
-				127A57EF29A8E4DA0087BE2A /* Assets.xcassets */,
 				127A57F129A8E4DA0087BE2A /* LaunchScreen.storyboard */,
+				127A57EF29A8E4DA0087BE2A /* Assets.xcassets */,
 				127A57F429A8E4DA0087BE2A /* Info.plist */,
 			);
 			path = msilversTakeHome;

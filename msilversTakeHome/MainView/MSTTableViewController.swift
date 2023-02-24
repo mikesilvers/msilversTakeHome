@@ -31,18 +31,30 @@ class MSTTableViewController: UITableViewController {
 
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "NameCell", for: indexPath)
+        
+        var cell = tableView.dequeueReusableCell(withIdentifier: "NameCell", for: indexPath)
+        
+        // only process the cell if the call is able to be cast into the `MSTTableViewCell` - should never fail
+        if (cell as? MSTTableViewCell) != nil {
+            
+            setupCell(&cell, User(id: 1,
+                                  name: "This is a funny long name line and should make it two lines",
+                                  email: "m@m.com",
+                                  phone: "(123) 222-4536 ext 120943"))
 
-        if let cell = cell as? MSTTableViewCell {
-            cell.nameLabel.text = "Mr. First M. Name"
-            cell.emailLabel.text = "thisismyemail@gmail.com"
-            cell.phoneLabel.text = "(123) 124-0987 ext 5512567"
+            // set the background to give us some every other rows as grey/white
+            // Note: Remember that index path row is 0 for the first row.  We want white/light gray/white/etc..
+            if indexPath.row.isMultiple(of: 2) {
+                cell.backgroundColor = .white
+            } else {
+                cell.backgroundColor = .lightGray
+            }
+
         }
-
+        
         return cell
     }
     
-
     /*
     // Override to support conditional editing of the table view.
     override func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
@@ -87,5 +99,33 @@ class MSTTableViewController: UITableViewController {
         // Pass the selected object to the new view controller.
     }
     */
+    
+    // MARK: - Supporting functions
+    
+    /// Process the cell and setup the cell labels
+    /// - Parameter cell: A `UITableViewCell` as an `inout` variable containing the cell to process
+    /// - Parameter user: The `User` object containing the information to display in the cell
+    private func setupCell(_ cell: inout UITableViewCell, _ user: User) {
+        
+        // set the cell to process
+        guard let processCell = cell as? MSTTableViewCell else {
+            // if the cast can not be done, we can do nothing - should never occur
+            return
+        }
+
+        defer {
+            // reset the cell according to the updated cell
+            cell = processCell
+        }
+        
+        // Set the fields - if the field was not passed the value is nil
+        // If the value is nil, the label will not appear and the size is adjusted accordingly
+        processCell.nameLabel.text = user.name
+        processCell.emailLabel.text = user.email
+        processCell.phoneLabel.text = user.phone
+
+    }
+    
+
     
 }
