@@ -1,34 +1,16 @@
 PODS:
-  - AFNetworking (4.0.1):
-    - AFNetworking/NSURLSession (= 4.0.1)
-    - AFNetworking/Reachability (= 4.0.1)
-    - AFNetworking/Security (= 4.0.1)
-    - AFNetworking/Serialization (= 4.0.1)
-    - AFNetworking/UIKit (= 4.0.1)
-  - AFNetworking/NSURLSession (4.0.1):
-    - AFNetworking/Reachability
-    - AFNetworking/Security
-    - AFNetworking/Serialization
-  - AFNetworking/Reachability (4.0.1)
-  - AFNetworking/Security (4.0.1)
-  - AFNetworking/Serialization (4.0.1)
-  - AFNetworking/UIKit (4.0.1):
-    - AFNetworking/NSURLSession
-  - SwiftyJSON (4.3.0)
+  - Alamofire (5.6.4)
 
 DEPENDENCIES:
-  - AFNetworking (~> 4.0)
-  - SwiftyJSON (~> 4.0)
+  - Alamofire (~> 5.6)
 
 SPEC REPOS:
   trunk:
-    - AFNetworking
-    - SwiftyJSON
+    - Alamofire
 
 SPEC CHECKSUMS:
-  AFNetworking: 7864c38297c79aaca1500c33288e429c3451fdce
-  SwiftyJSON: 6faa0040f8b59dead0ee07436cbf76b73c08fd08
+  Alamofire: 4e95d97098eacb88856099c4fc79b526a299e48c
 
-PODFILE CHECKSUM: e27a1d3cbc2fbd02e1ce5eeb4b361fa6f6d841f9
+PODFILE CHECKSUM: f10b8338b327987439ea0cf27bd6779a27de14bc
 
 COCOAPODS: 1.11.3

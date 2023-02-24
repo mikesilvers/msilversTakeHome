@@ -1,3 +1,2 @@
 ${PODS_ROOT}/Target Support Files/Pods-msilversTakeHome-msilversTakeHomeUITests/Pods-msilversTakeHome-msilversTakeHomeUITests-frameworks.sh
-${BUILT_PRODUCTS_DIR}/AFNetworking/AFNetworking.framework
-${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework
+${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework

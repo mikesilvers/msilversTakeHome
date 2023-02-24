@@ -6,8 +6,7 @@ target 'msilversTakeHome' do
   use_frameworks!
 
   # Pods for msilversTakeHome
-  pod 'SwiftyJSON', '~> 4.0'
-  pod 'AFNetworking', '~> 4.0'
+  pod 'Alamofire', '~> 5.6'
 
   target 'msilversTakeHomeTests' do
     inherit! :search_paths
