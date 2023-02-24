@@ -164,7 +164,6 @@
 				D6D2B1F93629A14BDE2880B5 /* Pods-msilversTakeHomeTests.debug.xcconfig */,
 				21AB5B6E1B933A29042D965B /* Pods-msilversTakeHomeTests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -583,6 +582,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = D16C0C7092D8AAB58883D2ED /* Pods-msilversTakeHome.debug.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = "$(inherited)";
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
@@ -612,6 +612,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = B2DE339101F20B57092F48E8 /* Pods-msilversTakeHome.release.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = "$(inherited)";
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
@@ -641,7 +642,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = D6D2B1F93629A14BDE2880B5 /* Pods-msilversTakeHomeTests.debug.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = "$(inherited)";
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
@@ -662,7 +663,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 21AB5B6E1B933A29042D965B /* Pods-msilversTakeHomeTests.release.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = "$(inherited)";
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
@@ -683,7 +684,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = AE53440FD25763EDE1C9ACC0 /* Pods-msilversTakeHome-msilversTakeHomeUITests.debug.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = "$(inherited)";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = E994U5CV5A;
@@ -702,7 +703,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 22BAC2D87E45896E34BC9BF4 /* Pods-msilversTakeHome-msilversTakeHomeUITests.release.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = "$(inherited)";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = E994U5CV5A;
