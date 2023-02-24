@@ -27,19 +27,24 @@ class MSTTableViewController: UITableViewController {
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        // #warning Incomplete implementation, return the number of rows
-        return 0
+        return 1
     }
 
-    /*
+    
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier", for: indexPath)
+        let cell = tableView.dequeueReusableCell(withIdentifier: "NameCell", for: indexPath)
 
+        if let cell = cell as? MSTTableViewCell {
+            cell.nameLabel.text = "Mr. First M. Name"
+            cell.emailLabel.text = "thisismyemail@gmail.com"
+            cell.phoneLabel.text = "(123) 124-0987 ext 5512567"
+        }
         // Configure the cell...
+        
 
         return cell
     }
-    */
+    
 
     /*
     // Override to support conditional editing of the table view.

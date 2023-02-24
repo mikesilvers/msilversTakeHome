@@ -2,7 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="c3d-SD-Shv">
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21507"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -16,13 +16,59 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="NameCell" id="vNC-3j-iPn">
-                                <rect key="frame" x="0.0" y="50" width="393" height="43.666667938232422"/>
+                            <tableViewCell clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="NameCell" rowHeight="89" id="vNC-3j-iPn" customClass="MSTTableViewCell" customModule="msilversTakeHome" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="50" width="393" height="89"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="vNC-3j-iPn" id="1hH-Nl-Wep">
-                                    <rect key="frame" x="0.0" y="0.0" width="393" height="43.666667938232422"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="393" height="89"/>
                                     <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="First M. Last" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="R96-VH-XXz">
+                                            <rect key="frame" x="20" y="11" width="353" height="21"/>
+                                            <accessibility key="accessibilityConfiguration" identifier="nameLabel"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="21" id="pOq-bC-QJx"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="111-222-3455 ext 12903478" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7ht-Vf-Kvs">
+                                            <rect key="frame" x="20" y="68" width="353" height="21"/>
+                                            <accessibility key="accessibilityConfiguration" identifier="phoneLabel"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="email@email.com" lineBreakMode="wordWrap" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AAU-Iq-nN4">
+                                            <rect key="frame" x="20" y="42" width="353" height="20.333333333333329"/>
+                                            <accessibility key="accessibilityConfiguration" identifier="emailLabel"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="20.333333333333329" id="IrA-1z-LbA"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="AAU-Iq-nN4" firstAttribute="leading" secondItem="1hH-Nl-Wep" secondAttribute="leadingMargin" id="Gqs-r0-iTO"/>
+                                        <constraint firstItem="7ht-Vf-Kvs" firstAttribute="top" secondItem="AAU-Iq-nN4" secondAttribute="bottom" constant="5.6666666666666714" id="Ks6-DN-sXi"/>
+                                        <constraint firstAttribute="trailing" secondItem="7ht-Vf-Kvs" secondAttribute="trailing" constant="20" id="gEW-Gk-9po"/>
+                                        <constraint firstItem="R96-VH-XXz" firstAttribute="top" secondItem="1hH-Nl-Wep" secondAttribute="topMargin" id="oQ3-kM-Fir"/>
+                                        <constraint firstItem="7ht-Vf-Kvs" firstAttribute="leading" secondItem="1hH-Nl-Wep" secondAttribute="leading" constant="20" id="ocP-7x-uVU"/>
+                                        <constraint firstAttribute="trailingMargin" secondItem="AAU-Iq-nN4" secondAttribute="trailing" id="qxd-da-ily"/>
+                                        <constraint firstItem="R96-VH-XXz" firstAttribute="leading" secondItem="1hH-Nl-Wep" secondAttribute="leadingMargin" id="qyn-gl-i7A"/>
+                                        <constraint firstItem="AAU-Iq-nN4" firstAttribute="top" secondItem="R96-VH-XXz" secondAttribute="bottom" constant="10" id="svI-xR-JqV"/>
+                                        <constraint firstAttribute="trailingMargin" secondItem="R96-VH-XXz" secondAttribute="trailing" id="t6b-Fp-dxN"/>
+                                        <constraint firstAttribute="bottom" secondItem="7ht-Vf-Kvs" secondAttribute="bottom" id="uQM-zo-bhY"/>
+                                    </constraints>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="emailLabel" destination="AAU-Iq-nN4" id="Di0-eU-7QH"/>
+                                    <outlet property="nameLabel" destination="R96-VH-XXz" id="gqE-cx-I5L"/>
+                                    <outlet property="phoneLabel" destination="7ht-Vf-Kvs" id="PWF-j9-kFC"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -33,7 +79,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zDy-ec-wBT" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-66" y="-45"/>
+            <point key="canvasLocation" x="-66.412213740458014" y="-45.070422535211272"/>
         </scene>
     </scenes>
     <resources>
