@@ -48,8 +48,17 @@ class MSTTableViewController: UITableViewController {
                 strongSelf.users = [User]()
                 strongSelf.tableView.reloadData()
                 
+                // the error message 
+                let message = """
+There was an error while retrieving the user list.\n
+Please refresh the list to try again.\n\n
+\(error?.localizedDescription ?? "Unknown Error")
+"""
+                
                 // display the error to the user
-                var dialog = UIAlertController(title: "User List Error", message: "There was an error while retrieving the user list.\nPlease refresh the list to try again.\n\n\(error?.localizedDescription ?? "Unknown Error")", preferredStyle: .alert)
+                var dialog = UIAlertController(title: "User List Error",
+                                               message: message,
+                                               preferredStyle: .alert)
                 let ok = UIAlertAction(title: "OK", style: .default)
                 let retry = UIAlertAction(title: "Retry", style: .default) { [weak self] _ in
                     guard let strongSelf = self else { return }
