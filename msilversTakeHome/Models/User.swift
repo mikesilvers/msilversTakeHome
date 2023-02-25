@@ -9,7 +9,7 @@ import Foundation
 
 /// The user information retrieved for display
 /// Note: SInce we are not in control of the API endpoint, the only required field is the `id`
-struct User: Codable {
+struct User: Identifiable, Codable {
     /// the id number for the contact
     var id: Int
     /// the contact name

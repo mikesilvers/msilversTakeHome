@@ -6,15 +6,67 @@
 //
 
 import UIKit
+import Combine
 
 class MSTTableViewController: UITableViewController {
-        
+    
+    private var cancellable: Set<AnyCancellable> = []
+    var viewModel: MSTMainViewModel = MSTMainViewModel()
+
+    private var users = [User]()
+
+    // MARK: View Functions
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // the auto height for cell and labels
         tableView.rowHeight = UITableView.automaticDimension
         tableView.estimatedRowHeight = 80
+        
+        // this is the connector to update the table when the new list of users are displayed
+        viewModel.$userList
+            .sink(receiveValue: { [weak self] (userList) in
+                
+                guard let strongSelf = self else { return }
+                
+                strongSelf.users = userList ?? [User]()
+                strongSelf.tableView.reloadData()
+                
+            })
+            .store(in: &cancellable)
+        
+        // this is the connector for when an error occurs
+        viewModel.$userError
+            .sink(receiveValue: { [weak self] (error) in
+                
+                guard let strongSelf = self else { return }
+                
+                if error == nil { return }
+                
+                // clear out the existing values on the table
+                strongSelf.users = [User]()
+                strongSelf.tableView.reloadData()
+                
+                // display the error to the user
+                var dialog = UIAlertController(title: "User List Error", message: "There was an error while retrieving the user list.\nPlease refresh the list to try again.\n\n\(error?.localizedDescription ?? "Unknown Error")", preferredStyle: .alert)
+                let ok = UIAlertAction(title: "OK", style: .default)
+                let retry = UIAlertAction(title: "Retry", style: .default) { [weak self] _ in
+                    guard let strongSelf = self else { return }
+                    strongSelf.viewModel.getUserList()
+                }
+                
+                dialog.addAction(ok)
+                dialog.addAction(retry)
+                
+                self?.present(dialog, animated: true)
+                
+            })
+            .store(in: &cancellable)
+        
+        
+        // process the user
+        refreshUsers()
         
     }
 
@@ -26,7 +78,7 @@ class MSTTableViewController: UITableViewController {
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 1
+        return users.count
     }
 
     
@@ -34,13 +86,12 @@ class MSTTableViewController: UITableViewController {
         
         var cell = tableView.dequeueReusableCell(withIdentifier: "NameCell", for: indexPath)
         
+        let user = users[indexPath.row]
+        
         // only process the cell if the call is able to be cast into the `MSTTableViewCell` - should never fail
         if (cell as? MSTTableViewCell) != nil {
             
-            setupCell(&cell, User(id: 1,
-                                  name: "This is a funny long name line and should make it two lines",
-                                  email: "m@m.com",
-                                  phone: "(123) 222-4536 ext 120943"))
+            setupCell(&cell, user)
 
             // set the background to give us some every other rows as grey/white
             // Note: Remember that index path row is 0 for the first row.  We want white/light gray/white/etc..
@@ -56,6 +107,14 @@ class MSTTableViewController: UITableViewController {
     }
     
     // MARK: - Supporting functions
+    
+    private func refreshUsers() {
+        
+        viewModel.getUserList()
+        
+        
+    }
+    
     
     /// Process the cell and setup the cell labels
     /// - Parameter cell: A `UITableViewCell` as an `inout` variable containing the cell to process
