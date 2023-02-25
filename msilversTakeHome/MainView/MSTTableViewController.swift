@@ -48,7 +48,7 @@ class MSTTableViewController: UITableViewController {
                 strongSelf.users = [User]()
                 strongSelf.tableView.reloadData()
                 
-                // the error message 
+                // the error message
                 let message = """
 There was an error while retrieving the user list.\n
 Please refresh the list to try again.\n\n
