@@ -33,6 +33,9 @@ class MSTTableViewController: UITableViewController {
                 strongSelf.users = userList ?? [User]()
                 strongSelf.tableView.reloadData()
                 
+                // make sure the refresh control is no longer refreshing - if this was from a refresh
+                strongSelf.refreshControl?.endRefreshing()
+                
             })
             .store(in: &cancellable)
         
@@ -45,9 +48,12 @@ class MSTTableViewController: UITableViewController {
                 if error == nil { return }
                 
                 // clear out the existing values on the table
-                strongSelf.users = [User]()
+                strongSelf.users.removeAll()
                 strongSelf.tableView.reloadData()
-                
+
+                // make sure the refresh control is no longer refreshing - if this was from a refresh
+                strongSelf.refreshControl?.endRefreshing()
+
                 // the error message
                 let message = """
 There was an error while retrieving the user list.\n
@@ -56,7 +62,7 @@ Please refresh the list to try again.\n\n
 """
                 
                 // display the error to the user
-                var dialog = UIAlertController(title: "User List Error",
+                let dialog = UIAlertController(title: "User List Error",
                                                message: message,
                                                preferredStyle: .alert)
                 let ok = UIAlertAction(title: "OK", style: .default)
@@ -120,10 +126,21 @@ Please refresh the list to try again.\n\n
     private func refreshUsers() {
         
         viewModel.getUserList()
-        
-        
     }
     
+    @IBAction func refreshControlAction(_ sender: UIRefreshControl) {
+        
+        // for the purposes of this app, clear the data and refresh
+        // if this were production - we would check with product to see how they want this handled
+        // if you use the network analyzer and slow down the network link - this will be apparent
+        // for a normal network speed, the values appear to flash
+        users.removeAll()
+        tableView.reloadData()
+        
+        // do the call for data
+        viewModel.getUserList()
+        
+    }
     
     /// Process the cell and setup the cell labels
     /// - Parameter cell: A `UITableViewCell` as an `inout` variable containing the cell to process
