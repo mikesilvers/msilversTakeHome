@@ -11,10 +11,12 @@ target 'msilversTakeHome' do
   target 'msilversTakeHomeTests' do
     inherit! :search_paths
     # Pods for testing
+    pod 'Alamofire', '~> 5.6'
   end
 
   target 'msilversTakeHomeUITests' do
     # Pods for testing
+    pod 'Alamofire', '~> 5.6'
   end
 
 end
