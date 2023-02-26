@@ -10,9 +10,15 @@ import Combine
 
 class MSTTableViewController: UITableViewController {
     
+    /// the cancellable for memory management when using combine
     private var cancellable: Set<AnyCancellable> = []
+    /// The view model to access users and provide them ot the table view
     var viewModel: MSTMainViewModel = MSTMainViewModel()
 
+    /// The activity indicatoe used when the network call is occurring
+    private var activityIndicator = UIActivityIndicatorView()
+    
+    /// The data source of users
     private var users = [User]()
 
     // MARK: View Functions
@@ -29,7 +35,11 @@ class MSTTableViewController: UITableViewController {
             .sink(receiveValue: { [weak self] (userList) in
                 
                 guard let strongSelf = self else { return }
+        
+                // make the activity indicator disappear
+                strongSelf.activityIndicatorShow(false)
                 
+                // set the new user list
                 strongSelf.users = userList ?? [User]()
                 strongSelf.tableView.reloadData()
                 
@@ -44,7 +54,10 @@ class MSTTableViewController: UITableViewController {
             .sink(receiveValue: { [weak self] (error) in
                 
                 guard let strongSelf = self else { return }
-                
+
+                // make the activity indicator disappear
+                strongSelf.activityIndicatorShow(false)
+
                 if error == nil { return }
                 
                 // clear out the existing values on the table
@@ -79,13 +92,12 @@ Please refresh the list to try again.\n\n
             })
             .store(in: &cancellable)
         
-        
         // process the user
         refreshUsers()
         
     }
-
-    // MARK: - Table view data source
+    
+    // MARK: - UITableView data source
 
     override func numberOfSections(in tableView: UITableView) -> Int {
         // We are only using a single section for this display
@@ -120,27 +132,8 @@ Please refresh the list to try again.\n\n
         
         return cell
     }
-    
-    // MARK: - Supporting functions
-    
-    private func refreshUsers() {
-        
-        viewModel.getUserList()
-    }
-    
-    @IBAction func refreshControlAction(_ sender: UIRefreshControl) {
-        
-        // for the purposes of this app, clear the data and refresh
-        // if this were production - we would check with product to see how they want this handled
-        // if you use the network analyzer and slow down the network link - this will be apparent
-        // for a normal network speed, the values appear to flash
-        users.removeAll()
-        tableView.reloadData()
-        
-        // do the call for data
-        viewModel.getUserList()
-        
-    }
+
+    // MARK: - UITableViewCell support functions
     
     /// Process the cell and setup the cell labels
     /// - Parameter cell: A `UITableViewCell` as an `inout` variable containing the cell to process
@@ -165,7 +158,68 @@ Please refresh the list to try again.\n\n
         processCell.phoneLabel.text = user.phone
 
     }
-    
 
+    // MARK: - Supporting functions
+    
+    private func refreshUsers() {
+        
+        // turn on the activity indicator
+        activityIndicatorShow()
+
+        // for the purposes of this app, clear the data and refresh
+        // if this were production - we would check with product to see how they want this handled
+        // if you use the network analyzer and slow down the network link - this will be apparent
+        // for a normal network speed, the values appear to flash
+        users.removeAll()
+        tableView.reloadData()
+
+        // do the lookup for the users
+        viewModel.getUserList()
+    }
+    
+    @IBAction func refreshControlAction(_ sender: UIRefreshControl) {
+        
+        // just refresh the user list
+        refreshUsers()
+    }
+    
+    // MARK: Activity Indicator functions
+    
+    ///  Adds the Activity Indicator to the table view
+    private func activityIndicatorAdd() {
+        
+        // set some of the defaults to the activity indicator
+        activityIndicator.style = .large
+        activityIndicator.hidesWhenStopped = true
+
+        // center the activity indicator
+        activityIndicator.center = CGPoint(x: tableView.bounds.midX, y: tableView.bounds.midY)
+        
+        // add the activity indicator
+        tableView.addSubview(activityIndicator)
+        
+    }
+    
+    /// Controls the activity indicator.  Makes sure the indicator is added as a subview if it does not exits and animates/stops animation.
+    /// - Parameter show: A `Bool` where `true` starts the animation of the activity indicator.  `false` stops the animation.
+    private func activityIndicatorShow(_ show: Bool = true) {
+        
+        if show {
+            
+            // make sure the activity indicator was displayed
+            if activityIndicator.superview == nil {
+                activityIndicatorAdd()
+            }
+            
+            // make sure we can see the activity indicator and start it spinning
+            activityIndicator.isHidden = false
+            activityIndicator.startAnimating()
+        } else {
+            
+            // stop the animator from spinning.  Automatically hides when it is stopped.
+            activityIndicator.stopAnimating()
+        }
+        
+    }
     
 }
