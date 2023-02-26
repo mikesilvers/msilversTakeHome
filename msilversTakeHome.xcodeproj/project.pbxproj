@@ -22,6 +22,7 @@
 		127A57F329A8E4DA0087BE2A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 127A57F129A8E4DA0087BE2A /* LaunchScreen.storyboard */; };
 		127A580829A8E4DA0087BE2A /* msilversTakeHomeUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 127A580729A8E4DA0087BE2A /* msilversTakeHomeUITests.swift */; };
 		127A580A29A8E4DA0087BE2A /* msilversTakeHomeUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 127A580929A8E4DA0087BE2A /* msilversTakeHomeUITestsLaunchTests.swift */; };
+		12A3924529AC04E50018F393 /* Service.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1234FA3C29A982AD00EFECF2 /* Service.swift */; };
 		486954C7ACB80A92D64A6D56 /* Pods_msilversTakeHomeTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 470F31D9A8C97D3A85F5D238 /* Pods_msilversTakeHomeTests.framework */; };
 		AFA55018837CC6D668ADBCBD /* Pods_msilversTakeHome.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0D2D755B553C29E6F27760A2 /* Pods_msilversTakeHome.framework */; };
 		BD65147402AA1F415B5FCE09 /* Pods_msilversTakeHome_msilversTakeHomeUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 96FB05A61A0EFF5744675075 /* Pods_msilversTakeHome_msilversTakeHomeUITests.framework */; };
@@ -463,6 +464,7 @@
 			files = (
 				1234FA3429A910F900EFECF2 /* User.swift in Sources */,
 				1234FA3629A9116000EFECF2 /* UserCodableTests.swift in Sources */,
+				12A3924529AC04E50018F393 /* Service.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

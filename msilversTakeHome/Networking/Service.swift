@@ -14,21 +14,27 @@ protocol ServiceProtocol {
 }
 
 class Service {
+    // creating a singleton for this service class
+    // Although singletons are not commonly used, this is an instance where a singleton makes sense
     static let shared: ServiceProtocol = Service()
     private init() { }
 }
 
 extension Service: ServiceProtocol {
     
+    /// The function that fetches users.
+    /// - Returns: A publisher with the data response and en error, if one occurs
     func fetchUsers() -> AnyPublisher<DataResponse<[User], NetworkError>, Never> {
         
-//        guard let url = URL(string: "https://jsonplaceholder.typicode.com/users") else {
-//            // there was an error forming the URL
-//            return Empty(completeImmediately: true)
-//        }
-
-        // NOTE: replace the force unwrap
-        let url = URL(string: "https://jsonplaceholder.typicode.com/users")!
+        let urlString = "https://jsonplaceholder.typicode.com/users"
+        
+        // this is a force unwrap and not usually used in code.
+        // since the creation of a URL will breakdown into its elements, we know that the URL
+        // is properly formed.  Since it is properly formed, there will never be a crash on the
+        // force unwrap.
+        // If the code is changed and a different URL string is used, then the app will crash and
+        // we will see the error.
+        let url = URL(string: urlString)!
 
         return AF.request(url, method: .get)
             .validate()
@@ -42,5 +48,4 @@ extension Service: ServiceProtocol {
             .eraseToAnyPublisher()
         
     }
-
 }
