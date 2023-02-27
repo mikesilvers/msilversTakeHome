@@ -38,8 +38,6 @@ final class ServiceTests: XCTestCase {
         // set the static class
         ServiceMock.setup(managerConfig: ServiceMock.ManagerConfiguration(manager: manager))
         
-        
-        
     }
     
     override func tearDown() {

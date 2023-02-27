@@ -58,13 +58,7 @@
 		127A57F229A8E4DA0087BE2A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		127A57F429A8E4DA0087BE2A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		127A57F929A8E4DA0087BE2A /* msilversTakeHomeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = msilversTakeHomeTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		127A580729A8E4DA0087BE2A /* msilversTakeHomeUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = msilversTakeHomeUITests.swift; sourceTree = "<group>"; };
-		127A580929A8E4DA0087BE2A /* msilversTakeHomeUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = msilversTakeHomeUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		12A3924629AC11390018F393 /* ServiceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceTests.swift; sourceTree = "<group>"; };
-		12A3924A29AC13900018F393 /* modified-json-3.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = "modified-json-3.json"; path = "SampleJSON/modified-json-3.json"; sourceTree = SOURCE_ROOT; };
-		12A3924B29AC13900018F393 /* modified-json-1.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = "modified-json-1.json"; path = "SampleJSON/modified-json-1.json"; sourceTree = SOURCE_ROOT; };
-		12A3924C29AC13900018F393 /* correct-json.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = "correct-json.json"; path = "SampleJSON/correct-json.json"; sourceTree = SOURCE_ROOT; };
-		12A3924D29AC13900018F393 /* modified-json-2.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = "modified-json-2.json"; path = "SampleJSON/modified-json-2.json"; sourceTree = SOURCE_ROOT; };
 		12A3925229AC13A00018F393 /* modified-json-3.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = "modified-json-3.json"; path = "SampleJSON/modified-json-3.json"; sourceTree = SOURCE_ROOT; };
 		12A3925329AC13A00018F393 /* modified-json-2.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = "modified-json-2.json"; path = "SampleJSON/modified-json-2.json"; sourceTree = SOURCE_ROOT; };
 		12A3925429AC13A00018F393 /* correct-json.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = "correct-json.json"; path = "SampleJSON/correct-json.json"; sourceTree = SOURCE_ROOT; };
@@ -73,10 +67,7 @@
 		12A3925C29AC184A0018F393 /* ServiceMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceMock.swift; sourceTree = "<group>"; };
 		12A3925F29ACEEF40018F393 /* Ext.XCTestCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Ext.XCTestCase.swift; sourceTree = "<group>"; };
 		21AB5B6E1B933A29042D965B /* Pods-msilversTakeHomeTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-msilversTakeHomeTests.release.xcconfig"; path = "Target Support Files/Pods-msilversTakeHomeTests/Pods-msilversTakeHomeTests.release.xcconfig"; sourceTree = "<group>"; };
-		22BAC2D87E45896E34BC9BF4 /* Pods-msilversTakeHome-msilversTakeHomeUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-msilversTakeHome-msilversTakeHomeUITests.release.xcconfig"; path = "Target Support Files/Pods-msilversTakeHome-msilversTakeHomeUITests/Pods-msilversTakeHome-msilversTakeHomeUITests.release.xcconfig"; sourceTree = "<group>"; };
 		470F31D9A8C97D3A85F5D238 /* Pods_msilversTakeHomeTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_msilversTakeHomeTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		96FB05A61A0EFF5744675075 /* Pods_msilversTakeHome_msilversTakeHomeUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_msilversTakeHome_msilversTakeHomeUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		AE53440FD25763EDE1C9ACC0 /* Pods-msilversTakeHome-msilversTakeHomeUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-msilversTakeHome-msilversTakeHomeUITests.debug.xcconfig"; path = "Target Support Files/Pods-msilversTakeHome-msilversTakeHomeUITests/Pods-msilversTakeHome-msilversTakeHomeUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		B2DE339101F20B57092F48E8 /* Pods-msilversTakeHome.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-msilversTakeHome.release.xcconfig"; path = "Target Support Files/Pods-msilversTakeHome/Pods-msilversTakeHome.release.xcconfig"; sourceTree = "<group>"; };
 		D16C0C7092D8AAB58883D2ED /* Pods-msilversTakeHome.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-msilversTakeHome.debug.xcconfig"; path = "Target Support Files/Pods-msilversTakeHome/Pods-msilversTakeHome.debug.xcconfig"; sourceTree = "<group>"; };
 		D6D2B1F93629A14BDE2880B5 /* Pods-msilversTakeHomeTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-msilversTakeHomeTests.debug.xcconfig"; path = "Target Support Files/Pods-msilversTakeHomeTests/Pods-msilversTakeHomeTests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -133,7 +124,6 @@
 			children = (
 				127A57E529A8E4D90087BE2A /* msilversTakeHome */,
 				127A57FC29A8E4DA0087BE2A /* msilversTakeHomeTests */,
-				127A580629A8E4DA0087BE2A /* msilversTakeHomeUITests */,
 				127A57E429A8E4D90087BE2A /* Products */,
 				52EE8D9F15FFDFC7B3E4C108 /* Pods */,
 				528CDC15E45E0B172E7143C8 /* Frameworks */,
@@ -176,16 +166,6 @@
 			path = msilversTakeHomeTests;
 			sourceTree = "<group>";
 		};
-		127A580629A8E4DA0087BE2A /* msilversTakeHomeUITests */ = {
-			isa = PBXGroup;
-			children = (
-				12A3924929AC13740018F393 /* support-files */,
-				127A580729A8E4DA0087BE2A /* msilversTakeHomeUITests.swift */,
-				127A580929A8E4DA0087BE2A /* msilversTakeHomeUITestsLaunchTests.swift */,
-			);
-			path = msilversTakeHomeUITests;
-			sourceTree = "<group>";
-		};
 		12A3924829AC135D0018F393 /* support-files */ = {
 			isa = PBXGroup;
 			children = (
@@ -195,17 +175,6 @@
 				12A3925529AC13A00018F393 /* modified-json-1.json */,
 				12A3925329AC13A00018F393 /* modified-json-2.json */,
 				12A3925229AC13A00018F393 /* modified-json-3.json */,
-			);
-			path = "support-files";
-			sourceTree = "<group>";
-		};
-		12A3924929AC13740018F393 /* support-files */ = {
-			isa = PBXGroup;
-			children = (
-				12A3924C29AC13900018F393 /* correct-json.json */,
-				12A3924B29AC13900018F393 /* modified-json-1.json */,
-				12A3924D29AC13900018F393 /* modified-json-2.json */,
-				12A3924A29AC13900018F393 /* modified-json-3.json */,
 			);
 			path = "support-files";
 			sourceTree = "<group>";
@@ -222,7 +191,6 @@
 			isa = PBXGroup;
 			children = (
 				0D2D755B553C29E6F27760A2 /* Pods_msilversTakeHome.framework */,
-				96FB05A61A0EFF5744675075 /* Pods_msilversTakeHome_msilversTakeHomeUITests.framework */,
 				470F31D9A8C97D3A85F5D238 /* Pods_msilversTakeHomeTests.framework */,
 			);
 			name = Frameworks;
@@ -233,8 +201,6 @@
 			children = (
 				D16C0C7092D8AAB58883D2ED /* Pods-msilversTakeHome.debug.xcconfig */,
 				B2DE339101F20B57092F48E8 /* Pods-msilversTakeHome.release.xcconfig */,
-				AE53440FD25763EDE1C9ACC0 /* Pods-msilversTakeHome-msilversTakeHomeUITests.debug.xcconfig */,
-				22BAC2D87E45896E34BC9BF4 /* Pods-msilversTakeHome-msilversTakeHomeUITests.release.xcconfig */,
 				D6D2B1F93629A14BDE2880B5 /* Pods-msilversTakeHomeTests.debug.xcconfig */,
 				21AB5B6E1B933A29042D965B /* Pods-msilversTakeHomeTests.release.xcconfig */,
 			);
