@@ -1,6 +1,0 @@
-framework module Pods_msilversTakeHomeTests {
-  umbrella header "Pods-msilversTakeHomeTests-umbrella.h"
-
-  export *
-  module * { export * }
-}

@@ -1,6 +1,0 @@
-framework module Pods_msilversTakeHome {
-  umbrella header "Pods-msilversTakeHome-umbrella.h"
-
-  export *
-  module * { export * }
-}
