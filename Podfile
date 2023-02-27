@@ -14,11 +14,6 @@ target 'msilversTakeHome' do
     pod 'Alamofire', '~> 5.6'
   end
 
-  target 'msilversTakeHomeUITests' do
-    # Pods for testing
-    pod 'Alamofire', '~> 5.6'
-  end
-
 end
 
 post_install do |installer_representation|

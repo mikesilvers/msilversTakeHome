@@ -20,32 +20,20 @@
 		127A57EE29A8E4D90087BE2A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 127A57EC29A8E4D90087BE2A /* Main.storyboard */; };
 		127A57F029A8E4DA0087BE2A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 127A57EF29A8E4DA0087BE2A /* Assets.xcassets */; };
 		127A57F329A8E4DA0087BE2A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 127A57F129A8E4DA0087BE2A /* LaunchScreen.storyboard */; };
-		127A580829A8E4DA0087BE2A /* msilversTakeHomeUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 127A580729A8E4DA0087BE2A /* msilversTakeHomeUITests.swift */; };
-		127A580A29A8E4DA0087BE2A /* msilversTakeHomeUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 127A580929A8E4DA0087BE2A /* msilversTakeHomeUITestsLaunchTests.swift */; };
 		12A3924529AC04E50018F393 /* Service.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1234FA3C29A982AD00EFECF2 /* Service.swift */; };
 		12A3924729AC11390018F393 /* ServiceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12A3924629AC11390018F393 /* ServiceTests.swift */; };
-		12A3924E29AC13900018F393 /* modified-json-3.json in Resources */ = {isa = PBXBuildFile; fileRef = 12A3924A29AC13900018F393 /* modified-json-3.json */; };
-		12A3924F29AC13900018F393 /* modified-json-1.json in Resources */ = {isa = PBXBuildFile; fileRef = 12A3924B29AC13900018F393 /* modified-json-1.json */; };
-		12A3925029AC13900018F393 /* correct-json.json in Resources */ = {isa = PBXBuildFile; fileRef = 12A3924C29AC13900018F393 /* correct-json.json */; };
-		12A3925129AC13900018F393 /* modified-json-2.json in Resources */ = {isa = PBXBuildFile; fileRef = 12A3924D29AC13900018F393 /* modified-json-2.json */; };
 		12A3925629AC13A00018F393 /* modified-json-3.json in Resources */ = {isa = PBXBuildFile; fileRef = 12A3925229AC13A00018F393 /* modified-json-3.json */; };
 		12A3925729AC13A00018F393 /* modified-json-2.json in Resources */ = {isa = PBXBuildFile; fileRef = 12A3925329AC13A00018F393 /* modified-json-2.json */; };
 		12A3925829AC13A00018F393 /* correct-json.json in Resources */ = {isa = PBXBuildFile; fileRef = 12A3925429AC13A00018F393 /* correct-json.json */; };
 		12A3925929AC13A00018F393 /* modified-json-1.json in Resources */ = {isa = PBXBuildFile; fileRef = 12A3925529AC13A00018F393 /* modified-json-1.json */; };
+		12A3925B29AC14480018F393 /* MockURLProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12A3925A29AC14480018F393 /* MockURLProtocol.swift */; };
+		12A3925D29AC184A0018F393 /* UserListAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12A3925C29AC184A0018F393 /* UserListAPI.swift */; };
 		486954C7ACB80A92D64A6D56 /* Pods_msilversTakeHomeTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 470F31D9A8C97D3A85F5D238 /* Pods_msilversTakeHomeTests.framework */; };
 		AFA55018837CC6D668ADBCBD /* Pods_msilversTakeHome.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0D2D755B553C29E6F27760A2 /* Pods_msilversTakeHome.framework */; };
-		BD65147402AA1F415B5FCE09 /* Pods_msilversTakeHome_msilversTakeHomeUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 96FB05A61A0EFF5744675075 /* Pods_msilversTakeHome_msilversTakeHomeUITests.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
 		127A57FA29A8E4DA0087BE2A /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 127A57DB29A8E4D80087BE2A /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 127A57E229A8E4D90087BE2A;
-			remoteInfo = msilversTakeHome;
-		};
-		127A580429A8E4DA0087BE2A /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 127A57DB29A8E4D80087BE2A /* Project object */;
 			proxyType = 1;
@@ -71,7 +59,6 @@
 		127A57F229A8E4DA0087BE2A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		127A57F429A8E4DA0087BE2A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		127A57F929A8E4DA0087BE2A /* msilversTakeHomeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = msilversTakeHomeTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		127A580329A8E4DA0087BE2A /* msilversTakeHomeUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = msilversTakeHomeUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		127A580729A8E4DA0087BE2A /* msilversTakeHomeUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = msilversTakeHomeUITests.swift; sourceTree = "<group>"; };
 		127A580929A8E4DA0087BE2A /* msilversTakeHomeUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = msilversTakeHomeUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		12A3924629AC11390018F393 /* ServiceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceTests.swift; sourceTree = "<group>"; };
@@ -83,6 +70,8 @@
 		12A3925329AC13A00018F393 /* modified-json-2.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = "modified-json-2.json"; path = "SampleJSON/modified-json-2.json"; sourceTree = SOURCE_ROOT; };
 		12A3925429AC13A00018F393 /* correct-json.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = "correct-json.json"; path = "SampleJSON/correct-json.json"; sourceTree = SOURCE_ROOT; };
 		12A3925529AC13A00018F393 /* modified-json-1.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = "modified-json-1.json"; path = "SampleJSON/modified-json-1.json"; sourceTree = SOURCE_ROOT; };
+		12A3925A29AC14480018F393 /* MockURLProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockURLProtocol.swift; sourceTree = "<group>"; };
+		12A3925C29AC184A0018F393 /* UserListAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserListAPI.swift; sourceTree = "<group>"; };
 		21AB5B6E1B933A29042D965B /* Pods-msilversTakeHomeTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-msilversTakeHomeTests.release.xcconfig"; path = "Target Support Files/Pods-msilversTakeHomeTests/Pods-msilversTakeHomeTests.release.xcconfig"; sourceTree = "<group>"; };
 		22BAC2D87E45896E34BC9BF4 /* Pods-msilversTakeHome-msilversTakeHomeUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-msilversTakeHome-msilversTakeHomeUITests.release.xcconfig"; path = "Target Support Files/Pods-msilversTakeHome-msilversTakeHomeUITests/Pods-msilversTakeHome-msilversTakeHomeUITests.release.xcconfig"; sourceTree = "<group>"; };
 		470F31D9A8C97D3A85F5D238 /* Pods_msilversTakeHomeTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_msilversTakeHomeTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -107,14 +96,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				486954C7ACB80A92D64A6D56 /* Pods_msilversTakeHomeTests.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		127A580029A8E4DA0087BE2A /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				BD65147402AA1F415B5FCE09 /* Pods_msilversTakeHome_msilversTakeHomeUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -165,7 +146,6 @@
 			children = (
 				127A57E329A8E4D90087BE2A /* msilversTakeHome.app */,
 				127A57F929A8E4DA0087BE2A /* msilversTakeHomeTests.xctest */,
-				127A580329A8E4DA0087BE2A /* msilversTakeHomeUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -192,6 +172,8 @@
 				12A3924829AC135D0018F393 /* support-files */,
 				1234FA3529A9116000EFECF2 /* UserCodableTests.swift */,
 				12A3924629AC11390018F393 /* ServiceTests.swift */,
+				12A3925A29AC14480018F393 /* MockURLProtocol.swift */,
+				12A3925C29AC184A0018F393 /* UserListAPI.swift */,
 			);
 			path = msilversTakeHomeTests;
 			sourceTree = "<group>";
@@ -293,26 +275,6 @@
 			productReference = 127A57F929A8E4DA0087BE2A /* msilversTakeHomeTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		127A580229A8E4DA0087BE2A /* msilversTakeHomeUITests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 127A581329A8E4DA0087BE2A /* Build configuration list for PBXNativeTarget "msilversTakeHomeUITests" */;
-			buildPhases = (
-				44DE51D7C7681DA176C5BBD4 /* [CP] Check Pods Manifest.lock */,
-				127A57FF29A8E4DA0087BE2A /* Sources */,
-				127A580029A8E4DA0087BE2A /* Frameworks */,
-				127A580129A8E4DA0087BE2A /* Resources */,
-				9644BA146A21DA8B1C002810 /* [CP] Embed Pods Frameworks */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				127A580529A8E4DA0087BE2A /* PBXTargetDependency */,
-			);
-			name = msilversTakeHomeUITests;
-			productName = msilversTakeHomeUITests;
-			productReference = 127A580329A8E4DA0087BE2A /* msilversTakeHomeUITests.xctest */;
-			productType = "com.apple.product-type.bundle.ui-testing";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -327,10 +289,6 @@
 						CreatedOnToolsVersion = 14.2;
 					};
 					127A57F829A8E4DA0087BE2A = {
-						CreatedOnToolsVersion = 14.2;
-						TestTargetID = 127A57E229A8E4D90087BE2A;
-					};
-					127A580229A8E4DA0087BE2A = {
 						CreatedOnToolsVersion = 14.2;
 						TestTargetID = 127A57E229A8E4D90087BE2A;
 					};
@@ -351,7 +309,6 @@
 			targets = (
 				127A57E229A8E4D90087BE2A /* msilversTakeHome */,
 				127A57F829A8E4DA0087BE2A /* msilversTakeHomeTests */,
-				127A580229A8E4DA0087BE2A /* msilversTakeHomeUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -378,42 +335,9 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		127A580129A8E4DA0087BE2A /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				12A3924F29AC13900018F393 /* modified-json-1.json in Resources */,
-				12A3925029AC13900018F393 /* correct-json.json in Resources */,
-				12A3924E29AC13900018F393 /* modified-json-3.json in Resources */,
-				12A3925129AC13900018F393 /* modified-json-2.json in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		44DE51D7C7681DA176C5BBD4 /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-msilversTakeHome-msilversTakeHomeUITests-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
 		7B40896A8618D7F5429B383A /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -475,23 +399,6 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		9644BA146A21DA8B1C002810 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-msilversTakeHome-msilversTakeHomeUITests/Pods-msilversTakeHome-msilversTakeHomeUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-msilversTakeHome-msilversTakeHomeUITests/Pods-msilversTakeHome-msilversTakeHomeUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-msilversTakeHome-msilversTakeHomeUITests/Pods-msilversTakeHome-msilversTakeHomeUITests-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
 		ADD03D0697B82559EA2B7658 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -533,17 +440,10 @@
 			files = (
 				1234FA3429A910F900EFECF2 /* User.swift in Sources */,
 				12A3924729AC11390018F393 /* ServiceTests.swift in Sources */,
+				12A3925B29AC14480018F393 /* MockURLProtocol.swift in Sources */,
 				1234FA3629A9116000EFECF2 /* UserCodableTests.swift in Sources */,
 				12A3924529AC04E50018F393 /* Service.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		127A57FF29A8E4DA0087BE2A /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				127A580829A8E4DA0087BE2A /* msilversTakeHomeUITests.swift in Sources */,
-				127A580A29A8E4DA0087BE2A /* msilversTakeHomeUITestsLaunchTests.swift in Sources */,
+				12A3925D29AC184A0018F393 /* UserListAPI.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -554,11 +454,6 @@
 			isa = PBXTargetDependency;
 			target = 127A57E229A8E4D90087BE2A /* msilversTakeHome */;
 			targetProxy = 127A57FA29A8E4DA0087BE2A /* PBXContainerItemProxy */;
-		};
-		127A580529A8E4DA0087BE2A /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 127A57E229A8E4D90087BE2A /* msilversTakeHome */;
-			targetProxy = 127A580429A8E4DA0087BE2A /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -708,8 +603,9 @@
 				DEVELOPMENT_TEAM = E994U5CV5A;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = msilversTakeHome/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = "MS Test";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
-				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen.storyboard;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
@@ -720,9 +616,12 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.mikesilvers.msilversTakeHome;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -738,8 +637,9 @@
 				DEVELOPMENT_TEAM = E994U5CV5A;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = msilversTakeHome/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = "MS Test";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
-				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen.storyboard;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
@@ -750,9 +650,12 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.mikesilvers.msilversTakeHome;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
@@ -798,44 +701,6 @@
 			};
 			name = Release;
 		};
-		127A581429A8E4DA0087BE2A /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = AE53440FD25763EDE1C9ACC0 /* Pods-msilversTakeHome-msilversTakeHomeUITests.debug.xcconfig */;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = "$(inherited)";
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = E994U5CV5A;
-				GENERATE_INFOPLIST_FILE = YES;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.mikesilvers.msilversTakeHomeUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = msilversTakeHome;
-			};
-			name = Debug;
-		};
-		127A581529A8E4DA0087BE2A /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 22BAC2D87E45896E34BC9BF4 /* Pods-msilversTakeHome-msilversTakeHomeUITests.release.xcconfig */;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = "$(inherited)";
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = E994U5CV5A;
-				GENERATE_INFOPLIST_FILE = YES;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.mikesilvers.msilversTakeHomeUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = msilversTakeHome;
-			};
-			name = Release;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -862,15 +727,6 @@
 			buildConfigurations = (
 				127A581129A8E4DA0087BE2A /* Debug */,
 				127A581229A8E4DA0087BE2A /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		127A581329A8E4DA0087BE2A /* Build configuration list for PBXNativeTarget "msilversTakeHomeUITests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				127A581429A8E4DA0087BE2A /* Debug */,
-				127A581529A8E4DA0087BE2A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
