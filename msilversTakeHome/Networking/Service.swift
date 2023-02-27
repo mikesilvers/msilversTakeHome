@@ -28,13 +28,13 @@ extension Service: ServiceProtocol {
 
         let urlString = "https://jsonplaceholder.typicode.com/users"
         
-        // this is a force unwrap and not usually used in code.
-        // since the creation of a URL will breakdown into its elements, we know that the URL
-        // is properly formed.  Since it is properly formed, there will never be a crash on the
-        // force unwrap.
-        // If the code is changed and a different URL string is used, then the app will crash and
-        // we will see the error.
-        let url = URL(string: urlString)!
+        guard let url = URL(string: urlString) else {
+            
+            // if the URL does not work, send the error
+            // the users will get an error that the list was not retrieved
+            return Fail(error: Alamofire.AFError.invalidURL(url: urlString)).eraseToAnyPublisher()
+
+        }
 
         return AF.request(url, method: .get, headers: [HTTPHeader(name: "Cache-Control", value: "no-cache")])
             .validate()
