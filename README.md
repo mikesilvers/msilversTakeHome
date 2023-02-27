@@ -53,7 +53,18 @@ The malformed JSON is included in the project in the SampleJSON folder:
 ### Unit tests
 `UserCodableTests` - this tests the decoding of JSON with multiple condition.  Some of the fields are missing and these tests make sure the decoding processes correctly.
 
-`ServiceTests` - this tests the functions of the `MSTMainViewModel`, the `Service`, and the `MSTTableViewController` as far as the API call and communications between them.
+`ServiceTests` - this tests the functions of the `MSTMainViewModel`, the `Service`, and the `MSTTableViewController` as far as the API call and communications between them.  The tests for this section, including Combine tests, is not complete.  It is not complete because of an error within the `ServiceTests` file.  This error is core to the testing process for Service and View Model tests.  
+
+For that reason, I could not proceed with writing the tests.  To demonstrate my coding processes and techniques, I kept the stubbed-in tests in the file and commented out the section causing the error.  This shows the mocking of the `URLSession` using protocols and `Session` objects to impact the methods called and data returned during the mocking.  This class was not completed as the completion requires the core error to be fixed before moving forward with the tests.
+
+The error, on line 55 of `ServiceTests` stated `Argument type 'any ServiceProtocol' does not conform to expected type 'ServiceProtocol'`.  I did not use the `any` keyword anywhere in the classes.  In addition, the production side of this same function is working correctly without the error.  The `any` keyword is nowhere in the code associated with these classes and functions.  
+
+In an effort to resolve the problem, I did the following:
+1. Researched the issue in Google, StackOverflow and Apple documentation
+2. Published the problem and relevant functions in a private Slack iOS forum
+3. Contacted a few of my Swift friends to ask opinions.
+
+There is no resolution at this time.  If this were a production app, the manual testing covers these scenarios and I would continue researching.  If there is no apparent resolution, ie: this is an Apple XCTest suite issue, then another method would be integrated to continue with the tests.
 
 ### UI Tests
 There are no UI Tests at this point.  The unit tests have covered the entire communications between the table view controller and the API call itself.  The options that would be available for UI Tests are to determine if the data is displayed and if the error message is displayed correctly.  The reason there are no UI tests right now is because the UI is manually tested, as described above, and additional tests could be added in the future.
