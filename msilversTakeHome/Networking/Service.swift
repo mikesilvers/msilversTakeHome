@@ -10,7 +10,7 @@ import Alamofire
 import Foundation
 
 protocol ServiceProtocol {
-    func fetchUsers() -> AnyPublisher<DataResponse<[User], NetworkError>, Never>
+    func fetchUsers() -> AnyPublisher<[User], AFError>
 }
 
 class Service {
@@ -24,8 +24,8 @@ extension Service: ServiceProtocol {
     
     /// The function that fetches users.
     /// - Returns: A publisher with the data response and en error, if one occurs
-    func fetchUsers() -> AnyPublisher<DataResponse<[User], NetworkError>, Never> {
-        
+    func fetchUsers() -> AnyPublisher<[User], AFError> {
+
         let urlString = "https://jsonplaceholder.typicode.com/users"
         
         // this is a force unwrap and not usually used in code.
@@ -36,14 +36,10 @@ extension Service: ServiceProtocol {
         // we will see the error.
         let url = URL(string: urlString)!
 
-        return AF.request(url, method: .get)
+        return AF.request(url, method: .get, headers: [HTTPHeader(name: "Cache-Control", value: "no-cache")])
             .validate()
             .publishDecodable(type: [User].self)
-            .map { response in
-                response.mapError { error in
-                    return NetworkError(initialError: error)
-                }
-            }
+            .value()
             .receive(on: DispatchQueue.main)
             .eraseToAnyPublisher()
         

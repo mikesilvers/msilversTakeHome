@@ -14,7 +14,7 @@ class MSTMainViewModel: ObservableObject {
     /// The list of users published after accessed
     @Published var userList: [User]?
     /// The errors, if there any errors, published after the error occurs
-    @Published var userError: NetworkError?
+    @Published var userError: AFError?
     
     /// The cancellable bucket for memory management with Combine
     private var cancellable: AnyCancellable?
@@ -31,20 +31,22 @@ class MSTMainViewModel: ObservableObject {
     func getUserList() {
         
         cancellable = dataManager.fetchUsers()
-            .sink(receiveCompletion: {_ in
-                
-            },
-                  receiveValue: { [weak self] (resultIn) in
+            .sink(receiveCompletion: { [weak self] (errorIn) in
                 
                 guard let strongSelf = self else { return }
                 
-                if let err = resultIn.error {
-                    strongSelf.userList = nil
+                switch errorIn {
+                case .failure(let err):
                     strongSelf.userError = err
-                } else if let val = resultIn.value {
-                    strongSelf.userList = val
-                    strongSelf.userError = nil
+                case .finished:
+                    break
                 }
+                
+            }, receiveValue: { [weak self] (value) in
+                
+                guard let strongSelf = self else { return }
+                
+                strongSelf.userList = value
                 
             })
         
