@@ -36,6 +36,7 @@ extension Service: ServiceProtocol {
 
         }
 
+        // The `AF` static class uses the default `Session` object for `URLSession` in the background.  AlamoFire encapsulates `URLSession` for network calls.
         return AF.request(url, method: .get, headers: [HTTPHeader(name: "Cache-Control", value: "no-cache")])
             .validate()
             .publishDecodable(type: [User].self)

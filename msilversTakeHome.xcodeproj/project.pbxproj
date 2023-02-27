@@ -27,6 +27,7 @@
 		12A3925929AC13A00018F393 /* modified-json-1.json in Resources */ = {isa = PBXBuildFile; fileRef = 12A3925529AC13A00018F393 /* modified-json-1.json */; };
 		12A3925B29AC14480018F393 /* MockURLProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12A3925A29AC14480018F393 /* MockURLProtocol.swift */; };
 		12A3925D29AC184A0018F393 /* ServiceMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12A3925C29AC184A0018F393 /* ServiceMock.swift */; };
+		12A3926029ACEEF40018F393 /* Ext.XCTestCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12A3925F29ACEEF40018F393 /* Ext.XCTestCase.swift */; };
 		486954C7ACB80A92D64A6D56 /* Pods_msilversTakeHomeTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 470F31D9A8C97D3A85F5D238 /* Pods_msilversTakeHomeTests.framework */; };
 		AFA55018837CC6D668ADBCBD /* Pods_msilversTakeHome.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0D2D755B553C29E6F27760A2 /* Pods_msilversTakeHome.framework */; };
 /* End PBXBuildFile section */
@@ -70,6 +71,7 @@
 		12A3925529AC13A00018F393 /* modified-json-1.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = "modified-json-1.json"; path = "SampleJSON/modified-json-1.json"; sourceTree = SOURCE_ROOT; };
 		12A3925A29AC14480018F393 /* MockURLProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockURLProtocol.swift; sourceTree = "<group>"; };
 		12A3925C29AC184A0018F393 /* ServiceMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceMock.swift; sourceTree = "<group>"; };
+		12A3925F29ACEEF40018F393 /* Ext.XCTestCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Ext.XCTestCase.swift; sourceTree = "<group>"; };
 		21AB5B6E1B933A29042D965B /* Pods-msilversTakeHomeTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-msilversTakeHomeTests.release.xcconfig"; path = "Target Support Files/Pods-msilversTakeHomeTests/Pods-msilversTakeHomeTests.release.xcconfig"; sourceTree = "<group>"; };
 		22BAC2D87E45896E34BC9BF4 /* Pods-msilversTakeHome-msilversTakeHomeUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-msilversTakeHome-msilversTakeHomeUITests.release.xcconfig"; path = "Target Support Files/Pods-msilversTakeHome-msilversTakeHomeUITests/Pods-msilversTakeHome-msilversTakeHomeUITests.release.xcconfig"; sourceTree = "<group>"; };
 		470F31D9A8C97D3A85F5D238 /* Pods_msilversTakeHomeTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_msilversTakeHomeTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -166,6 +168,7 @@
 		127A57FC29A8E4DA0087BE2A /* msilversTakeHomeTests */ = {
 			isa = PBXGroup;
 			children = (
+				12A3925E29ACEECC0018F393 /* Test Extensions */,
 				12A3924829AC135D0018F393 /* support-files */,
 				1234FA3529A9116000EFECF2 /* UserCodableTests.swift */,
 				12A3924629AC11390018F393 /* ServiceTests.swift */,
@@ -205,6 +208,14 @@
 				12A3924A29AC13900018F393 /* modified-json-3.json */,
 			);
 			path = "support-files";
+			sourceTree = "<group>";
+		};
+		12A3925E29ACEECC0018F393 /* Test Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				12A3925F29ACEEF40018F393 /* Ext.XCTestCase.swift */,
+			);
+			path = "Test Extensions";
 			sourceTree = "<group>";
 		};
 		528CDC15E45E0B172E7143C8 /* Frameworks */ = {
@@ -436,6 +447,7 @@
 			files = (
 				1234FA3429A910F900EFECF2 /* User.swift in Sources */,
 				12A3924729AC11390018F393 /* ServiceTests.swift in Sources */,
+				12A3926029ACEEF40018F393 /* Ext.XCTestCase.swift in Sources */,
 				12A3925B29AC14480018F393 /* MockURLProtocol.swift in Sources */,
 				1234FA3629A9116000EFECF2 /* UserCodableTests.swift in Sources */,
 				12A3924529AC04E50018F393 /* Service.swift in Sources */,

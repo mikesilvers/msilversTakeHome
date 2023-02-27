@@ -26,7 +26,7 @@ The instructions are as follows:
 7. Error handling for network problems.  Added a modal display when there is a network issue or if the JSON is malformed.  The modal allows the user to dismiss it or retry the request.
 
 ## Additional notes
-In this section a few concepts and issues are addressed.
+In this section a few concepts and issues are addressed.  I am developing in XCode 14.2 using Apple Swift version 5.7.2.
 
 ### Warnings on the storyboard
 * The warnings from AlamoFire will not be addressed or discussed as they are out of our control and do not provide any problems.
