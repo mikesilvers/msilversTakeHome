@@ -13,7 +13,6 @@
 		1234FA3429A910F900EFECF2 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1234FA3229A90A1B00EFECF2 /* User.swift */; };
 		1234FA3629A9116000EFECF2 /* UserCodableTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1234FA3529A9116000EFECF2 /* UserCodableTests.swift */; };
 		1234FA3829A92CA400EFECF2 /* MSTTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1234FA3729A92CA400EFECF2 /* MSTTableViewCell.swift */; };
-		1234FA3A29A981FA00EFECF2 /* NetworkError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1234FA3929A981FA00EFECF2 /* NetworkError.swift */; };
 		1234FA3D29A982AD00EFECF2 /* Service.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1234FA3C29A982AD00EFECF2 /* Service.swift */; };
 		127A57E729A8E4D90087BE2A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 127A57E629A8E4D90087BE2A /* AppDelegate.swift */; };
 		127A57E929A8E4D90087BE2A /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 127A57E829A8E4D90087BE2A /* SceneDelegate.swift */; };
@@ -27,7 +26,7 @@
 		12A3925829AC13A00018F393 /* correct-json.json in Resources */ = {isa = PBXBuildFile; fileRef = 12A3925429AC13A00018F393 /* correct-json.json */; };
 		12A3925929AC13A00018F393 /* modified-json-1.json in Resources */ = {isa = PBXBuildFile; fileRef = 12A3925529AC13A00018F393 /* modified-json-1.json */; };
 		12A3925B29AC14480018F393 /* MockURLProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12A3925A29AC14480018F393 /* MockURLProtocol.swift */; };
-		12A3925D29AC184A0018F393 /* UserListAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12A3925C29AC184A0018F393 /* UserListAPI.swift */; };
+		12A3925D29AC184A0018F393 /* ServiceMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12A3925C29AC184A0018F393 /* ServiceMock.swift */; };
 		486954C7ACB80A92D64A6D56 /* Pods_msilversTakeHomeTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 470F31D9A8C97D3A85F5D238 /* Pods_msilversTakeHomeTests.framework */; };
 		AFA55018837CC6D668ADBCBD /* Pods_msilversTakeHome.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0D2D755B553C29E6F27760A2 /* Pods_msilversTakeHome.framework */; };
 /* End PBXBuildFile section */
@@ -49,7 +48,6 @@
 		1234FA3229A90A1B00EFECF2 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		1234FA3529A9116000EFECF2 /* UserCodableTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserCodableTests.swift; sourceTree = "<group>"; };
 		1234FA3729A92CA400EFECF2 /* MSTTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MSTTableViewCell.swift; sourceTree = "<group>"; };
-		1234FA3929A981FA00EFECF2 /* NetworkError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkError.swift; sourceTree = "<group>"; };
 		1234FA3C29A982AD00EFECF2 /* Service.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Service.swift; sourceTree = "<group>"; };
 		127A57E329A8E4D90087BE2A /* msilversTakeHome.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = msilversTakeHome.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		127A57E629A8E4D90087BE2A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -71,7 +69,7 @@
 		12A3925429AC13A00018F393 /* correct-json.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = "correct-json.json"; path = "SampleJSON/correct-json.json"; sourceTree = SOURCE_ROOT; };
 		12A3925529AC13A00018F393 /* modified-json-1.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = "modified-json-1.json"; path = "SampleJSON/modified-json-1.json"; sourceTree = SOURCE_ROOT; };
 		12A3925A29AC14480018F393 /* MockURLProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockURLProtocol.swift; sourceTree = "<group>"; };
-		12A3925C29AC184A0018F393 /* UserListAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserListAPI.swift; sourceTree = "<group>"; };
+		12A3925C29AC184A0018F393 /* ServiceMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceMock.swift; sourceTree = "<group>"; };
 		21AB5B6E1B933A29042D965B /* Pods-msilversTakeHomeTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-msilversTakeHomeTests.release.xcconfig"; path = "Target Support Files/Pods-msilversTakeHomeTests/Pods-msilversTakeHomeTests.release.xcconfig"; sourceTree = "<group>"; };
 		22BAC2D87E45896E34BC9BF4 /* Pods-msilversTakeHome-msilversTakeHomeUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-msilversTakeHome-msilversTakeHomeUITests.release.xcconfig"; path = "Target Support Files/Pods-msilversTakeHome-msilversTakeHomeUITests/Pods-msilversTakeHome-msilversTakeHomeUITests.release.xcconfig"; sourceTree = "<group>"; };
 		470F31D9A8C97D3A85F5D238 /* Pods_msilversTakeHomeTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_msilversTakeHomeTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -116,7 +114,6 @@
 			isa = PBXGroup;
 			children = (
 				1234FA3229A90A1B00EFECF2 /* User.swift */,
-				1234FA3929A981FA00EFECF2 /* NetworkError.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -172,8 +169,6 @@
 				12A3924829AC135D0018F393 /* support-files */,
 				1234FA3529A9116000EFECF2 /* UserCodableTests.swift */,
 				12A3924629AC11390018F393 /* ServiceTests.swift */,
-				12A3925A29AC14480018F393 /* MockURLProtocol.swift */,
-				12A3925C29AC184A0018F393 /* UserListAPI.swift */,
 			);
 			path = msilversTakeHomeTests;
 			sourceTree = "<group>";
@@ -191,6 +186,8 @@
 		12A3924829AC135D0018F393 /* support-files */ = {
 			isa = PBXGroup;
 			children = (
+				12A3925A29AC14480018F393 /* MockURLProtocol.swift */,
+				12A3925C29AC184A0018F393 /* ServiceMock.swift */,
 				12A3925429AC13A00018F393 /* correct-json.json */,
 				12A3925529AC13A00018F393 /* modified-json-1.json */,
 				12A3925329AC13A00018F393 /* modified-json-2.json */,
@@ -425,7 +422,6 @@
 			files = (
 				127A57E729A8E4D90087BE2A /* AppDelegate.swift in Sources */,
 				1234FA3D29A982AD00EFECF2 /* Service.swift in Sources */,
-				1234FA3A29A981FA00EFECF2 /* NetworkError.swift in Sources */,
 				1234FA2C29A9012900EFECF2 /* MSTTableViewController.swift in Sources */,
 				1234FA3829A92CA400EFECF2 /* MSTTableViewCell.swift in Sources */,
 				1234FA2F29A9067E00EFECF2 /* MSTMainViewModel.swift in Sources */,
@@ -443,7 +439,7 @@
 				12A3925B29AC14480018F393 /* MockURLProtocol.swift in Sources */,
 				1234FA3629A9116000EFECF2 /* UserCodableTests.swift in Sources */,
 				12A3924529AC04E50018F393 /* Service.swift in Sources */,
-				12A3925D29AC184A0018F393 /* UserListAPI.swift in Sources */,
+				12A3925D29AC184A0018F393 /* ServiceMock.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

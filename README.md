@@ -52,3 +52,8 @@ The malformed JSON is included in the project in the SampleJSON folder:
 
 ### Unit tests
 `UserCodableTests` - this tests the decoding of JSON with multiple condition.  Some of the fields are missing and these tests make sure the decoding processes correctly.
+
+`ServiceTests` - this tests the functions of the `MSTMainViewModel`, the `Service`, and the `MSTTableViewController` as far as the API call and communications between them.
+
+### UI Tests
+There are no UI Tests at this point.  The unit tests have covered the entire communications between the table view controller and the API call itself.  The options that would be available for UI Tests are to determine if the data is displayed and if the error message is displayed correctly.  The reason there are no UI tests right now is because the UI is manually tested, as described above, and additional tests could be added in the future.

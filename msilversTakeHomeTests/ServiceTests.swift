@@ -6,11 +6,21 @@
 //
 
 import XCTest
+import Combine
 @testable import Alamofire
 
 final class ServiceTests: XCTestCase {
-
-    private var userRequest: UserListAPI!
+    
+    // - MARK: Variables
+    
+    private var serviceMock: ServiceMock!
+    
+    @Published var userList: [User]?
+    @Published var userError: AFError?
+    
+    private var cancellable: AnyCancellable?
+    
+    // MARK: - Setup ad teardown
     
     override func setUp() {
         super.setUp()
@@ -26,26 +36,27 @@ final class ServiceTests: XCTestCase {
             
         }()
 
-        userRequest = UserListAPI(manager: manager)
-        
-        userRequest.getUserList()
-            
+        serviceMock = ServiceMock(manager: manager)
         
     }
     
     override func tearDown() {
         super.tearDown()
         
-        userRequest = nil
+        serviceMock = nil
         
     }
     
-    func testExample() throws {
-        // This is an example of a functional test case.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
-        // Any test you write for XCTest can be annotated as throws and async.
-        // Mark your test throws to produce an unexpected failure when your test encounters an uncaught error.
-        // Mark your test async to allow awaiting for asynchronous code to complete. Check the results with assertions afterwards.
+    // MARK: - the tests
+    
+    func testGetUserList() throws {
+        
+        
+        
+        
+        
+        
+        
     }
 
 }

@@ -35,7 +35,7 @@ final class UserCodableTests: XCTestCase {
             // loop thru the user array
             for (idx, testUser) in userArray.enumerated() {
                 
-                // perform the actual tests - the errors will be
+                // perform the actual tests - the errors will be listed
                 checkUser(testUser, idx)
             }
             
