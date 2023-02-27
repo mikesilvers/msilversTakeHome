@@ -33,7 +33,7 @@ In this section a few concepts and issues are addressed.  I am developing in XCo
 * The warnings for constraints on the table view cells are displayed but not an issue.  They are due to the auto-sizing nature of the labels in the cell and do not impact the display at all.
 
 ### Using Combine rather than delegates
-There was a choice on how to process data that was returned from the API call.  The API call is completed in the view model.  Combine was used in place of delegates.  Combine is the reactive programming methodology.  When the API call results are returned, two Published variables are used.  One contains the user list and the other contains errors.
+There was a choice on how to process data that was returned from the API call.  The API call is completed in the view model.  Combine was used in place of delegates.  Combine is the reactive programming paradigm.  When the API call results are returned, two Published variables are used.  One contains the user list and the other contains errors.
 
 The network calls are completed using the Service class.  This is done to encapsulate API calls.  the view model uses the Service class to perform the API call.
 
